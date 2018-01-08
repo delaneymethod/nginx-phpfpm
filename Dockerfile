@@ -18,6 +18,8 @@ COPY php-fpm.conf /etc/php/7.1/fpm/php-fpm.conf
 
 COPY www.conf /etc/php/7.1/fpm/pool.d/www.conf
 
+COPY php.ini /etc/php/7.1/fpm/php.ini
+
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
 
 EXPOSE 80
