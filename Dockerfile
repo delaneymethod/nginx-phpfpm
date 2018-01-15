@@ -24,8 +24,6 @@ COPY php.ini /etc/php/7.1/fpm/php.ini
 
 COPY xdebug.ini /etc/php/7.1/mods-available/xdebug.ini
      
-EXPOSE 80    
-
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 COPY start-container /usr/local/bin/start-container
