@@ -34,6 +34,9 @@ server {
 		fastcgi_temp_file_write_size 256k;
 		
 		fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+		
+		# Point to our PHP FPM docker container.
+		#fastcgi_pass phpfpm:9000;
 	}
 	
 	location ~* (?:^|/)\. {
