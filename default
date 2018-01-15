@@ -2,8 +2,8 @@ server {
 	client_max_body_size 100m;
 	client_body_buffer_size 128k;
 	
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
+	listen ${APP_PORT} default_server;
+	listen [::]:${APP_PORT} default_server ipv6only=on;
 
 	root /var/www/html/public;
 	
