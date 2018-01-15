@@ -9,8 +9,7 @@ server {
 	
 	index index.php index.html index.htm;
 
-	# Make site accessible from http://localhost/
-	server_name localhost;
+	server_name ${SERVER_NAME};
 	
 	charset utf-8;
 	
