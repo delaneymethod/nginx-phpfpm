@@ -27,6 +27,11 @@ server {
 		# include /etc/nginx/naxsi.rules
 	}
 	
+	location ^~ /.well-known/acme-challenge/ {
+		allow all;
+		root /var/www/html/public;
+	}
+	
 	location ~ \.php$ {
 		include snippets/fastcgi-php.conf;
 	
