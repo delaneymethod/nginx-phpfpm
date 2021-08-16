@@ -4,8 +4,8 @@ server {
 	client_body_buffer_size 256k;
 	large_client_header_buffers 4 16k;
 
-	listen 80 default_server;
-	listen [::]:80 default_server ipv6only=on;
+	listen 8080 default_server;
+	listen [::]:8080 default_server ipv6only=on;
 
 	root /var/www/html/web;
 
