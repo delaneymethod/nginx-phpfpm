@@ -33,4 +33,12 @@ COPY start-container /usr/local/bin/start-container
 
 RUN chmod +x /usr/local/bin/start-container
 
+RUN mkdir /var/www/html/storage
+
+RUN chmod -R 777 /var/www/html/storage
+
+RUN mkdir /var/www/html/backups
+
+RUN chmod -R 777 /var/www/html/backups
+
 CMD ["start-container"]
