@@ -34,12 +34,7 @@ server {
 		# as directory, then fall back to displaying a 404.
 		try_files $cache_path $uri $uri/ /index.php?$query_string;
 
-        # Route all requests such as `/style.12345.css` to `/style.css`
-        #if (!-e $request_filename) {
-        #    rewrite ^/(.+)\.([a-fA-F\d]+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp)$ /$1.$3 break;
-        #}
-
-		# Uncomment to enable naxsi on this location
+        # Uncomment to enable naxsi on this location
 		# include /etc/nginx/naxsi.rules
 	}
 
